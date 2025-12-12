@@ -27,7 +27,7 @@ print ("-" * 70)
 
 
 # 2) Sélectionner et afficher uniquement la colonne "Longueur" ---
-print("\n--- Tâche
+print("\n--- Tâche)
       
 
 #Affichage de la colonne 'Longueur' ---")
@@ -37,7 +37,7 @@ print("-" * 50)
 
 
 # 3) Filtrer les séquences dont la longueur est supérieure à 10 ---
-print("\n--- Tâche 3
+print("\n--- Tâche 3)
 
 
 #Filtrage des séquences de Longueur > 10 ---")
@@ -48,7 +48,7 @@ print("-" * 50)
 
 
 # 4) Calculer le pourcentage moyen de GC avec 3 chiffres après la virgule ---
-print("\n--- Tâche 4
+print("\n--- Tâche 4)
 
 
 #Calcul du Pourcentage Moyen de GC ---")
@@ -75,3 +75,11 @@ print (df)
 print("-" * 70)
 
       
+# 6)Ajouter une colonne donnant le nombre de 'G' dans chaque séquence ---
+print("\n--- Tâche 6: Ajout de la colonne 'Nombre de G' ---")
+
+
+#Utilisation d'une fonction lambda avec la méthode .str.count() pour compter les 'G' dans la colonne "Séquence"
+df["Nombre de G"] = df["Séquence"].apply(lambda seq: seq.count('G'))
+print(df[["Séquence", "Nombre de G"]])
+print("-" * 50)
