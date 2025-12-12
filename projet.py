@@ -24,3 +24,14 @@ df = pd.DataFrame(data)
 print ("Tableau De Séquence ADN :")
 print (df)
 print ("-" * 70)
+
+
+# 2) Sélectionner et afficher uniquement la colonne "Longueur" ---
+print("\n--- Tâche
+      
+
+#Affichage de la colonne 'Longueur' ---")
+colonne_longueur = df["Longueur"]
+print(colonne_longueur)
+print("-" * 50)   
+      
