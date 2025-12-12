@@ -1,8 +1,1 @@
-std_GC=df ['Pourcentage GC'].std()
-std_longueur=df ["Longueur"].std()
-print("********écart-type du %GC et de la longueur des séquences********\n")
-print(f"Ecart type de %GC: {std_GC:.2f}")
-print(f"Ecart type de la longeur:{std_longueur:.2f}\n")
-#souvegarder le DataFrame dans un fichier csv
-df.to_csv("tableau_sequences.csv"
-,index=False)
+
