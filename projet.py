@@ -55,4 +55,23 @@ print("\n--- Tâche 4
 moyenne_gc = df['Pourcentage GC'].mean()
 print(f"4. Moyenne de 'Pourcentage GC': {moyenne_gc:.3f}")
 print("-" * 50)
+
+
+# 5) Ajouter Une Colonne "Catégorie GC"
+print ("***********Ajout De La Colonne 'Catégorie GC'***********")
+
+# Définition De La Fonction De Catégorisation
+def categorie_gc (pourcentage) :
+    if pourcentage > 55:
+        return "Riche"
+    elif 45 <= pourcentage <= 55:
+        return "Moyen"
+    else: # pourcentage < 45
+        return "Faible"
+            
+#Application De La Fonction A La Colonne " Pourcentage GC "
+df["Catégorie GC"]= df ["Pourcentage GC"].apply (categorie_gc)
+print (df)
+print("-" * 70)
+
       
