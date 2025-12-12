@@ -83,3 +83,41 @@ print("\n--- Tâche 6: Ajout de la colonne 'Nombre de G' ---")
 df["Nombre de G"] = df["Séquence"].apply(lambda seq: seq.count('G'))
 print(df[["Séquence", "Nombre de G"]])
 print("-" * 50)
+
+
+# 7)Calculer l'écart-type du %GC et de la longueur des séquences ---
+print("\n--- Tâche)
+Calcul de l'Écart-type (Std Dev) ---")
+
+
+#Calcul de l'écart-type (Standard Deviation)
+std_gc = df["Pourcentage GC"].std()
+std_longueur = df["Longueur"].std()
+
+#Arrondi pour l'affichage (optionnel, mais recommandé pour la clarté)
+std_gc_arrondi = round(std_gc, 3)
+std_longueur_arrondi = round(std_longueur, 3)
+
+print(f"Écart-type du Pourcentage GC: {std_gc_arrondi}")
+print(f"Écart-type de la Longueur: {std_longueur_arrondi}")
+print("-" * 50)
+
+
+# 8)Sauvegarder le tableau final dans un fichier CSV ---
+print("\n--- Tâche)
+Sauvegarde du Tableau Final en CSV ---")
+
+
+#Nom du fichier basé sur les consignes
+nom_fichier_csv = "Master_chef_projet_Analyse_ADN_Final.csv"
+
+#Sauvegarde du DataFrame complet dans un fichier CSV
+#index=False pour ne pas inclure l'index de pandas dans le fichier CSV
+df.to_csv(nom_fichier_csv, index=False)
+
+print(f"Le tableau final a été sauvegardé dans le fichier: {nom_fichier_csv}")
+print("-" * 50)
+
+#Affichage du tableau final complet pour vérification
+print("\n--- Tableau Final Complet ---")
+print(df)
